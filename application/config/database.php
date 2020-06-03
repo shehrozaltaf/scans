@@ -80,6 +80,10 @@ $db['default'] = array(
 	'password' => 'abcd1234',
 	'database' => 'scans',
 	'dbdriver' => 'sqlsrv',
+    /*'hostname' => 'f38158',
+    'username' => 'sa',
+    'password' => 'sa',
+    'database' => 'scans',*/
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

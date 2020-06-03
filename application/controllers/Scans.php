@@ -151,7 +151,6 @@ class Scans extends MX_Controller
 				}
 
 			} else {
-
 				$this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 				(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
 				(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
@@ -261,7 +260,6 @@ class Scans extends MX_Controller
 		$this->data['heading'] = "Household Midline Survey Progress";
 
 		if($this->users->in_group('admin') || $this->users->in_group('management')){
-
 			$this->data['clusters_by_district'] = $this->scans->query("select (case
 			when dist_id = '2' then 'Punjab'
 			else 'Sindh' end) as district, 
@@ -639,7 +637,7 @@ class Scans extends MX_Controller
 
 		$this->data['get_list'] = $this->scans->query("select * from clusters where randomized = 1");
 
-		$this->data['heading'] = "Add more five cases";
+		$this->data['heading'] = "Add more ten cases";
 
 		$this->data['message']  	= $this->session->flashdata('message');
 		$this->data['main_content'] = 'scans/add_five';
@@ -651,7 +649,7 @@ class Scans extends MX_Controller
 
 		$source 	 = 'listings';
 		$destination = 'destination';
-		$sample 	 = 5;
+		$sample 	 = 10;
 
 		$columns = 'col_id, hh02, tabNo, hh03, hh07, hh08, hh09, enumcode, uid';
 
@@ -693,7 +691,7 @@ class Scans extends MX_Controller
 
 				//echo '<p><strong>Dataset = '.$dataset->num_rows().' | Sample = '.$sample.' | Random Start = '.$random_start.' | Quotient = '.$quotient.'</strong></p>';
 
-				for($i = 1; $i <= 5; $i++){
+				for($i = 1; $i <= 10; $i++){
 
 					$data = array(
 						'randDT'  => date('Y-m-d h:i:s'),
@@ -719,7 +717,7 @@ class Scans extends MX_Controller
 					$index = floor($random_point);
 				}
 
-				$flash_msg = "Added five more cases to Cluster: ".$cluster;
+				$flash_msg = "Added ten more cases to Cluster: ".$cluster;
 				$value = '<div class="callout callout-success"><p>'.$flash_msg.'</p></div>';
 				$this->session->set_flashdata('message', $value);
 
