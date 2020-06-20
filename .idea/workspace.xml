@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="025789c4-4722-47e2-afdf-695a6eabd327" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Custom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
-    </list>
+    <list default="true" id="025789c4-4722-47e2-afdf-695a6eabd327" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+            <state relative-caret-position="323">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="e#860#1087#0#PHP" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -267,7 +261,7 @@
       <workItem from="1592465859092" duration="4716000" />
       <workItem from="1592470734682" duration="1590000" />
       <workItem from="1592475268212" duration="772000" />
-      <workItem from="1592632390970" duration="19075000" />
+      <workItem from="1592632390970" duration="19429000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1581156501413</created>
@@ -374,14 +368,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592652075697</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="finalize dental images">
+      <created>1592654625612</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592654625612</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56858000" />
+    <option name="totallyTimeSpent" value="57212000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -417,7 +418,8 @@
     <MESSAGE value="Initial Commit - scan Images" />
     <MESSAGE value="IC scan Images" />
     <MESSAGE value="Score Form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Score Form" />
+    <MESSAGE value="finalize dental images" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize dental images" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -827,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        <state relative-caret-position="323">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="e#860#1087#0#PHP" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
