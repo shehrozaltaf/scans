@@ -1,3 +1,37 @@
+<style>
+    .error {
+        border-bottom: 1px solid red !important;
+    }
+
+    .md-btn-myPrimary {
+        background: #2196f3 !important;
+        color: #fff;
+    }
+
+    .md-btn-mini {
+        line-height: 21px !important;
+        min-width: 12px;
+        font-size: 10px !important;
+        min-height: 24px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .my-btn {
+        margin: 2px !important;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    .align-left {
+        text-align: left;
+    }
+
+</style>
 <div id="page_content">
     <div id="page_content_inner">
         <div class="md-card">
@@ -259,44 +293,23 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
 <!--<script src="--><?php //echo base_url() ?><!--assets/js/custom/jquery.waitforimages.min.js"></script>-->
 <!--  gallery functions -->
 <!--<script src="--><?php //echo base_url() ?><!--assets/js/pages/page_gallery.min.js"></script>-->
-<style>
-    .error {
-        border-bottom: 1px solid red !important;
-    }
 
-    .md-btn-myPrimary {
-        background: #2196f3 !important;
-        color: #fff;
-    }
-
-    .md-btn-mini {
-        line-height: 21px !important;
-        min-width: 12px;
-        font-size: 10px !important;
-        min-height: 24px;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    .my-btn {
-        margin: 2px !important;
-    }
-
-    .align-right {
-        text-align: right;
-    }
-
-    .align-left {
-        text-align: left;
-    }
-
-</style>
 <script>
 
     function submitData() {
         var data = {};
+        var cluster = $('#cluster_score').val();
+        var hhno = $('#hhno_score').val();
+
+        data['cluster'] = $('#cluster_score').val();
+        data['hhno'] = $('#hhno_score').val();
+        if (cluster == '' || cluster == undefined) {
+            data['cluster'] = $('#cluster_no').val();
+        }
+
+        if (hhno == '' || hhno == undefined) {
+            data['hhno'] = $('#household').val();
+        }
         data['ud'] = $('#u_dmft_d').val();
         data['um'] = $('#u_dmft_m').val();
         data['uf'] = $('#u_dmft_f').val();
@@ -313,11 +326,25 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
             var id = $(v).attr('data-id');
             var va = $(v).attr('data-value');
             var k = l + id;
-            mydata.push(k + ' : ' + va);
+
+            var obj = {};
+            obj[k] = va;
+            mydata.push(obj);
         });
         data['data'] = mydata;
-        CallAjax('<?php echo base_url()?>index.php/dashboard/submitData', 'POST', data, function (res) {
-            console.log(res);
+        CallAjax('<?php echo base_url()?>index.php/dashboard/submitData', data, 'POST', function (res) {
+            if (res != '' && JSON.parse(res).length > 0) {
+                var response = JSON.parse(res);
+                try {
+                    notificatonShow(response[0], response[1]);
+                    if (response[1] === 'success') {
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 1000);
+                    }
+                } catch (e) {
+                }
+            }
         });
     }
 
