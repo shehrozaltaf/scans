@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="025789c4-4722-47e2-afdf-695a6eabd327" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/dashboard_.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard_.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/writable/pcfx_session_bb72hdu6jbab4ja62be25uah3n1puf6r" beforeDir="false" afterPath="$PROJECT_DIR$/application/writable/pcfx_session_bb72hdu6jbab4ja62be25uah3n1puf6r" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/writable/pcfx_session_8konvatjg07kc9are39olqeeiglkaf58" beforeDir="false" afterPath="$PROJECT_DIR$/application/writable/pcfx_session_8konvatjg07kc9are39olqeeiglkaf58" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,19 +25,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="112" column="80" lean-forward="true" selection-start-line="112" selection-start-column="80" selection-end-line="112" selection-end-column="80" />
+            <state relative-caret-position="136">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="e#421#867#0#HTML" />
-                <element signature="e#684#689#0#PHP" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#button#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="e#613#1060#0#HTML" />
+                <element signature="e#783#788#0#PHP" />
+                <element signature="n#button#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
                 <element signature="e#2065#2070#0#PHP" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -120,6 +114,18 @@
                 <element signature="e#15491#15539#0#HTML" />
                 <element signature="e#15540#15637#0#HTML" />
                 <element signature="e#15218#15367#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -311,6 +317,9 @@
       <replace>dt_tableExport</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="ONTO" value="refs/heads/scan_images" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -318,6 +327,19 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="scan_images" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -451,7 +473,7 @@
       <workItem from="1592465859092" duration="4716000" />
       <workItem from="1592470734682" duration="1590000" />
       <workItem from="1592475268212" duration="772000" />
-      <workItem from="1592632390970" duration="10292000" />
+      <workItem from="1592632390970" duration="10742000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1581156501413</created>
@@ -530,11 +552,25 @@
       <option name="project" value="LOCAL" />
       <updated>1592645543992</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="IC scan Images">
+      <created>1592645767702</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1592645767702</updated>
+    </task>
+    <task id="LOCAL-00013" summary="IC scan Images">
+      <created>1592645794947</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1592645794947</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48075000" />
+    <option name="totallyTimeSpent" value="48525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -571,7 +607,8 @@
     <MESSAGE value="Forms" />
     <MESSAGE value="RSV Form 2C" />
     <MESSAGE value="Initial Commit - scan Images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit - scan Images" />
+    <MESSAGE value="IC scan Images" />
+    <option name="LAST_COMMIT_MESSAGE" value="IC scan Images" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -602,13 +639,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/MForm.php" />
     <entry file="file://$PROJECT_DIR$/../projectreports/assets/js/core.js" />
-    <entry file="file://$PROJECT_DIR$/application/views/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="51" column="64" lean-forward="true" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Login.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/config.php" />
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
@@ -941,21 +971,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="112" column="80" lean-forward="true" selection-start-line="112" selection-start-column="80" selection-end-line="112" selection-end-column="80" />
+        <state relative-caret-position="136">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="e#421#867#0#HTML" />
-            <element signature="e#684#689#0#PHP" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#button#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#613#1060#0#HTML" />
+            <element signature="e#783#788#0#PHP" />
+            <element signature="n#button#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
             <element signature="e#2065#2070#0#PHP" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />

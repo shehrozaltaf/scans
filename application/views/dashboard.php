@@ -1,31 +1,35 @@
 <div id="page_content">
     <div id="page_content_inner">
-        <div class="md-card">
-            <div class="md-card-content">
-                <div class="uk-grid" data-uk-grid-margin>
-                    <div class="uk-width-large-1-2 uk-width-1-2">
-                        <div class="md-input-wrapper md-input-filled">
-                            <label for="cluster_no">Cluster</label>
-                            <input class="md-input" type="text" id="cluster_no" value="5901">
-                            <!--<select id="cluster_no" name="cluster_no" class="md-input">
+        <div class="uk-grid">
+            <div class="uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <div class="uk-grid" data-uk-grid-margin>
+                            <div class="uk-width-large-1-2 uk-width-1-2">
+                                <div class="md-input-wrapper md-input-filled">
+                                    <label for="cluster_no">Cluster</label>
+                                    <input class="md-input" type="text" id="cluster_no" value="5901">
+                                    <!--<select id="cluster_no" name="cluster_no" class="md-input">
                                 <option value="0">select cluster</option>
                                 <?php /*foreach ($getClusters as $c) {
                                     echo '<option value="' . $c->cluster_no . '" '.($slug==$c->cluster_no ?'selected':'').'>' . $c->cluster_no . '</option>';
                                 } */ ?>
                             </select>-->
+                                </div>
+                            </div>
+                            <div class="uk-width-large-1-2 uk-width-1-2">
+                                <div class="md-input-wrapper md-input-filled ">
+                                    <label for="household">Household</label>
+                                    <input class="md-input" type="text" id="household" value="0015-001">
+                                </div>
+                            </div>
+                            <div class="uk-width-large-1-3 uk-width-medium-1-1">
+                                <button type="button" href="javascript:void(0)" class="md-btn md-btn-primary"
+                                        onclick="searchData()">
+                                    Search
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="uk-width-large-1-2 uk-width-1-2">
-                        <div class="md-input-wrapper md-input-filled ">
-                            <label for="household">Household</label>
-                            <input class="md-input" type="text" id="household" value="0015-001">
-                        </div>
-                    </div>
-                    <div class="uk-width-large-1-3 uk-width-medium-1-1">
-                        <button type="button" href="javascript:void(0)" class="md-btn md-btn-primary"
-                                onclick="searchData()">
-                            Search
-                        </button>
                     </div>
                 </div>
             </div>
