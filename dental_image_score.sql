@@ -4,14 +4,14 @@ Navicat SQL Server Data Transfer
 Source Server         : sql server f38158
 Source Server Version : 105000
 Source Host           : f38158:1433
-Source Database       : sosas
+Source Database       : scans
 Source Schema         : dbo
 
 Target Server Type    : SQL Server
 Target Server Version : 105000
 File Encoding         : 65001
 
-Date: 2020-06-20 16:56:51
+Date: 2020-06-23 10:19:35
 */
 
 
@@ -87,7 +87,7 @@ CREATE TABLE [dbo].[dental_image_score] (
 
 
 GO
-DBCC CHECKIDENT(N'[dbo].[dental_image_score]', RESEED, 2)
+DBCC CHECKIDENT(N'[dbo].[dental_image_score]', RESEED, 5)
 GO
 
 -- ----------------------------
@@ -98,6 +98,12 @@ GO
 INSERT INTO [dbo].[dental_image_score] ([ud], [um], [uf], [ut], [ld], [lm], [lf], [lt], [other_observation], [u55], [u54], [u53], [u52], [u51], [u17], [u16], [u15], [u14], [u13], [u12], [u11], [u61], [u62], [u63], [u64], [u65], [u21], [u22], [u23], [u24], [u25], [u26], [u27], [l85], [l84], [l83], [l82], [l81], [l47], [l46], [l45], [l44], [l43], [l42], [l41], [l71], [l72], [l73], [l74], [l75], [l31], [l32], [l33], [l34], [l35], [l36], [l37], [id], [createdBy], [createdDateTime], [cluster], [hhno]) VALUES (N'3', N'2', N'2', N'7', N'4', N'3', N'3', N'10', N'Testing abcd xyz Testing abcd xyz Testing abcd xyz Testing abcd xyz Testing abcd xyz Testing abcd xyz ', N'2', N'1', N'3', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'2', N'1', N'3', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'2', N'0', N'0', N'1', N'0', N'1', N'0', N'0', N'2', N'0', N'0', N'3', N'0', N'3', N'0', N'0', N'1', N'0', N'0', N'2', N'3', N'0', N'0', N'1', N'1', N'shahroz.khan', N'2020-06-20 13:50:14.000', N'3321', N'0180-001');
 GO
 INSERT INTO [dbo].[dental_image_score] ([ud], [um], [uf], [ut], [ld], [lm], [lf], [lt], [other_observation], [u55], [u54], [u53], [u52], [u51], [u17], [u16], [u15], [u14], [u13], [u12], [u11], [u61], [u62], [u63], [u64], [u65], [u21], [u22], [u23], [u24], [u25], [u26], [u27], [l85], [l84], [l83], [l82], [l81], [l47], [l46], [l45], [l44], [l43], [l42], [l41], [l71], [l72], [l73], [l74], [l75], [l31], [l32], [l33], [l34], [l35], [l36], [l37], [id], [createdBy], [createdDateTime], [cluster], [hhno]) VALUES (N'3', N'2', N'2', N'7', N'4', N'3', N'3', N'10', N'Testing abcd xyz Testing abcd xyz Testing abcd xyz Testing abcd xyz Testing abcd xyz Testing abcd xyz ', N'2', N'1', N'3', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'2', N'1', N'3', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'2', N'0', N'0', N'1', N'0', N'1', N'0', N'0', N'2', N'0', N'0', N'3', N'0', N'3', N'0', N'0', N'1', N'0', N'0', N'2', N'3', N'0', N'0', N'1', N'2', N'shahroz.khan', N'2020-06-20 13:50:14.000', N'3321', N'0180-001');
+GO
+INSERT INTO [dbo].[dental_image_score] ([ud], [um], [uf], [ut], [ld], [lm], [lf], [lt], [other_observation], [u55], [u54], [u53], [u52], [u51], [u17], [u16], [u15], [u14], [u13], [u12], [u11], [u61], [u62], [u63], [u64], [u65], [u21], [u22], [u23], [u24], [u25], [u26], [u27], [l85], [l84], [l83], [l82], [l81], [l47], [l46], [l45], [l44], [l43], [l42], [l41], [l71], [l72], [l73], [l74], [l75], [l31], [l32], [l33], [l34], [l35], [l36], [l37], [id], [createdBy], [createdDateTime], [cluster], [hhno]) VALUES (N'1', N'1', N'1', N'3', N'2', N'1', N'1', N'4', N'observation observation observation observation observation observation observation observation observation observation observation observation observation ', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'2', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'3', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'2', N'0', N'0', N'0', N'1', N'0', N'3', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'3', N'shahroz.khan', N'2020-06-20 13:59:33.000', N'3321', N'0180-001');
+GO
+INSERT INTO [dbo].[dental_image_score] ([ud], [um], [uf], [ut], [ld], [lm], [lf], [lt], [other_observation], [u55], [u54], [u53], [u52], [u51], [u17], [u16], [u15], [u14], [u13], [u12], [u11], [u61], [u62], [u63], [u64], [u65], [u21], [u22], [u23], [u24], [u25], [u26], [u27], [l85], [l84], [l83], [l82], [l81], [l47], [l46], [l45], [l44], [l43], [l42], [l41], [l71], [l72], [l73], [l74], [l75], [l31], [l32], [l33], [l34], [l35], [l36], [l37], [id], [createdBy], [createdDateTime], [cluster], [hhno]) VALUES (N'2', N'0', N'0', N'2', N'0', N'1', N'0', N'1', N'', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'2', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'4', N'shahroz.khan', N'2020-06-20 14:01:55.000', N'3321', N'0180-001');
+GO
+INSERT INTO [dbo].[dental_image_score] ([ud], [um], [uf], [ut], [ld], [lm], [lf], [lt], [other_observation], [u55], [u54], [u53], [u52], [u51], [u17], [u16], [u15], [u14], [u13], [u12], [u11], [u61], [u62], [u63], [u64], [u65], [u21], [u22], [u23], [u24], [u25], [u26], [u27], [l85], [l84], [l83], [l82], [l81], [l47], [l46], [l45], [l44], [l43], [l42], [l41], [l71], [l72], [l73], [l74], [l75], [l31], [l32], [l33], [l34], [l35], [l36], [l37], [id], [createdBy], [createdDateTime], [cluster], [hhno]) VALUES (N'3', N'1', N'1', N'5', N'2', N'1', N'0', N'3', N'zcxscas', N'0', N'3', N'0', N'0', N'1', N'0', N'0', N'1', N'0', N'2', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'2', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'0', N'1', N'0', N'0', N'0', N'0', N'0', N'5', N'shahroz.khan', N'2020-06-20 14:05:44.000', N'3321', N'0180-001');
 GO
 SET IDENTITY_INSERT [dbo].[dental_image_score] OFF
 GO

@@ -28,7 +28,7 @@ class MDashboard extends CI_Model
     function getClusters()
     {
         $this->db->select("cluster_no");
-        $this->db->from('clusters');
+        $this->db->from('dental');
         $this->db->group_by('cluster_no');
         $this->db->order_by('cluster_no', 'desc');
         $query = $this->db->get();

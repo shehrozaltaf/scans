@@ -90,6 +90,7 @@ function validateNum(phoneNoDiv) {
 function returnMsg(divTextId, TextMsg, divTextclass, divId) {
     altair_helpers.content_preloader_hide();
     $('#' + divTextId).html('').html(TextMsg);
+    $('#' + divId).removeClass('uk-alert-danger').removeClass('uk-alert-success');
     $('#' + divId).removeClass('danger').removeClass('success').addClass(divTextclass).css('display', 'block');
     setTimeout(function () {
         $('#' + divTextId).html('');

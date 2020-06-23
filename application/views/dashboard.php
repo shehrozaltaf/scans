@@ -40,7 +40,7 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled">
                             <label for="cluster_no">Cluster</label>
-                            <input class="md-input" type="text" id="cluster_no" value="3321">
+                            <input class="md-input" type="text" id="cluster_no">
                             <!--<select id="cluster_no" name="cluster_no" class="md-input">
                                 <option value="0">select cluster</option>
                                 <?php /*foreach ($getClusters as $c) {
@@ -52,7 +52,7 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled ">
                             <label for="household">Household</label>
-                            <input class="md-input" type="text" id="household" value="0180-001">
+                            <input class="md-input" type="text" id="household">
                         </div>
                     </div>
                     <div class="uk-width-large-1-3 uk-width-medium-1-1">

@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="025789c4-4722-47e2-afdf-695a6eabd327" name="Default Changelist" comment="" />
+    <list default="true" id="025789c4-4722-47e2-afdf-695a6eabd327" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Custom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/MDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/MDashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/dashboard_.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_01_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_02_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_03_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_04_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_05_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_06_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_07_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_08_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_09_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_10_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_11_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar_12_tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/Image24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gallery/image_cropp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dental_image_score.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dental_image_score.sql" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,15 +81,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="136">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
-                <element signature="e#860#1087#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#2964#5085#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="e#15218#15367#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -68,7 +123,7 @@
       <find>uk-slideshow</find>
       <find>Slidenav and Dotnav</find>
       <find>Insert</find>
-      <find>md-btn-mini</find>
+      <find>csrf_test_name</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -114,13 +169,11 @@
         <option value="$PROJECT_DIR$/application/models/MForm.php" />
         <option value="$PROJECT_DIR$/application/controllers/Form.php" />
         <option value="$PROJECT_DIR$/application/views/users.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/core.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/form.php" />
         <option value="$PROJECT_DIR$/application/views/form.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/views/include/footer.php" />
-        <option value="$PROJECT_DIR$/assets/js/core.js" />
         <option value="C:/shehroz/themes/dashboards/altairNew/altair_new_update/altair_new/altair_html.tzdthemes.com/components_slideshow.html" />
         <option value="C:/shehroz/themes/dashboards/altairNew/altair_new_update/altair_new/altair_html.tzdthemes.com/page_gallery.html" />
         <option value="$PROJECT_DIR$/assets/js/pages/page_gallery.min.js" />
@@ -133,19 +186,21 @@
         <option value="$PROJECT_DIR$/assets/js/pages/plugins_datatables.min.js" />
         <option value="$PROJECT_DIR$/application/views/clusters.php" />
         <option value="$PROJECT_DIR$/application/views/include/nav.php" />
-        <option value="$PROJECT_DIR$/application/models/MDashboard.php" />
         <option value="$PROJECT_DIR$/application/views/household.php" />
         <option value="$PROJECT_DIR$/application/views/dashboard_.php" />
         <option value="$PROJECT_DIR$/assets/js/uikit_custom.min.js" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$PROJECT_DIR$/application/models/MDashboard.php" />
+        <option value="$PROJECT_DIR$/assets/js/core.js" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/models/Custom.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/dashboard.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="833" />
     <option name="width" value="854" />
     <option name="height" value="1017" />
   </component>
@@ -155,6 +210,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="scans_images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scans_images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -171,41 +237,7 @@
               <item name="scans_images" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\xampp\htdocs\scans_images" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="scans_images" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\xampp\htdocs\scans_images" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="scans_images" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\xampp\htdocs\scans_images" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="scans_images" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\xampp\htdocs\scans_images" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="scans_images" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\xampp\htdocs\scans_images" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="scans_images" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scans_images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -261,7 +293,8 @@
       <workItem from="1592465859092" duration="4716000" />
       <workItem from="1592470734682" duration="1590000" />
       <workItem from="1592475268212" duration="772000" />
-      <workItem from="1592632390970" duration="19429000" />
+      <workItem from="1592632390970" duration="19978000" />
+      <workItem from="1592889077596" duration="2038000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1581156501413</created>
@@ -375,18 +408,25 @@
       <option name="project" value="LOCAL" />
       <updated>1592654625612</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="dental images">
+      <created>1592655045530</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1592655045530</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57212000" />
+    <option name="totallyTimeSpent" value="59799000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2512225" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25427872" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32922733" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -419,13 +459,13 @@
     <MESSAGE value="IC scan Images" />
     <MESSAGE value="Score Form" />
     <MESSAGE value="finalize dental images" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize dental images" />
+    <MESSAGE value="dental images" />
+    <option name="LAST_COMMIT_MESSAGE" value="dental images" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../projectreports/application/views/include/nav.php" />
     <entry file="file://$PROJECT_DIR$/../projectreports/application/views/setting/indexadd.php" />
     <entry file="file://$PROJECT_DIR$/../projectreports/application/views/usersgroup.php" />
     <entry file="file://C:/shehroz/themes/dashboards/altairNew/altair_new_update/altair_new/altair_html.tzdthemes.com/forms_regular.html" />
@@ -441,13 +481,6 @@
     <entry file="file://$PROJECT_DIR$/../projectreports/assets/js/core.js" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Login.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/config.php" />
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="393" column="43" selection-start-line="393" selection-start-column="43" selection-end-line="393" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/login 2.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/core.js" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/form.php" />
@@ -541,27 +574,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding>
-            <element signature="e#71#162#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/MUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="35" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -593,20 +609,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/devices.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/MDashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/devices.php" />
     <entry file="file://C:/shehroz/themes/dashboards/altairNew/altair_new_update/altair_new/altair_html.tzdthemes.com/kendoui_autocomplete.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -771,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/shehroz/themes/dashboards/altairNew/altair_new_update/altair_new/altair_html.tzdthemes.com/components_slideshow.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -799,45 +795,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Users.php">
+    <entry file="file://$PROJECT_DIR$/application/models/MDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="389">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="62" column="20" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="111" column="61" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/constants.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+        <state relative-caret-position="77">
+          <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Custom.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        <state relative-caret-position="876">
+          <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="e#71#162#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        <state relative-caret-position="688">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Custom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <element signature="e#860#1087#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2964#5085#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="e#15218#15367#0#HTML" />
           </folding>
         </state>
       </provider>
