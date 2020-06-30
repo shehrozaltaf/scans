@@ -15,6 +15,7 @@ class MDashboard extends CI_Model
 
     function getData($cluster, $hhno)
     {
+
         $this->db->select("dental.cluster_no, 
         dental.hhno, 
         concat('vcoe1.aku.edu\scans\api\uploads\',dental.f01) as img, 
@@ -26,6 +27,18 @@ class MDashboard extends CI_Model
         $this->db->where('dental.hhno', $hhno);
         $this->db->where("REPLACE(dental.f01, ';', '|') NOT LIKE '%|%'");
         $query = $this->db->get();
+        return $query->result();
+    }
+
+    function getVidData($cluster, $hhno)
+    {
+        $this->scan_f3 = $this->load->database('scan_f3', true);
+        $this->scan_f3->select("*");
+        $this->scan_f3->from('dental_vdo');
+        $this->scan_f3->where('Filename  !=', '');
+        $this->scan_f3->where('cluster', $cluster);
+        $this->scan_f3->where('hhno', $hhno);
+        $query = $this->scan_f3->get();
         return $query->result();
     }
 

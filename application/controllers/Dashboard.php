@@ -51,14 +51,16 @@ class Dashboard extends CI_Controller
         $cluster = $_POST['cluster_no'];
         $household = $_POST['household'];
         $getData = $MDashboard->getData($cluster, $household);
+        $getVidData = $MDashboard->getVidData($cluster, $household);
         $checkExistData = $MDashboard->checkExistData($cluster, $household);
         $data = array();
-        $data[] = $getData;
+        $data['images'][] = $getData;
+        $data['videos'][] = $getVidData;
 
         if (isset($checkExistData) && $checkExistData != '' && count($checkExistData) > 0) {
-            $data[]->dataExist = $checkExistData;
+            $data['dataExist'][] = $checkExistData;
         } else {
-            $data[]->dataExist = '0';
+            $data['dataExist'][] = '0';
         }
 
         echo json_encode($data);
@@ -99,6 +101,36 @@ class Dashboard extends CI_Controller
         $InserData = $Custom->Insert($insertArr, 'id', 'dental_image_score', 'N');
         if ($InserData) {
             $response = array('Inserted Successfully', 'success');
+        } else {
+            $response = array('Something went wrong', 'error');
+        }
+        echo json_encode($response, true);
+
+    }
+
+    function editData()
+    {
+        $Custom = new Custom();
+        $insertArr = array();
+        $id = $_POST['id'];
+        $insertArr['ud'] = $_POST['ud'];
+        $insertArr['um'] = $_POST['um'];
+        $insertArr['uf'] = $_POST['uf'];
+        $insertArr['ut'] = $_POST['ut'];
+        $insertArr['ld'] = $_POST['ld'];
+        $insertArr['lm'] = $_POST['lm'];
+        $insertArr['lf'] = $_POST['lf'];
+        $insertArr['lt'] = $_POST['lt'];
+        $insertArr['other_observation'] = $_POST['other_observation'];
+        foreach ($_POST['data'] as $kk => $vv) {
+            foreach ($vv as $k => $v) {
+                $insertArr[$k] = $v;
+            }
+        }
+
+        $editData = $Custom->Edit($insertArr, 'id', $id, 'dental_image_score');
+        if ($editData) {
+            $response = array('Edited Successfully', 'success');
         } else {
             $response = array('Something went wrong', 'error');
         }

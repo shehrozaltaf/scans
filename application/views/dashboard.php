@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/viewerjs/viewer.min.css" media="all">
+<script src="<?php echo base_url() ?>assets/bower_components/viewerjs/viewer.js"></script>
+<script src="<?php echo base_url() ?>assets/bower_components/viewerjs/jquery-viewer.min.js"></script>
+
+
 <style>
     .error {
         border-bottom: 1px solid red !important;
@@ -31,6 +36,25 @@
         text-align: left;
     }
 
+    /* #galleryGrid_viewer li {
+         !*border: 1px solid transparent;*!
+         float: left;
+         height: calc(100% / 3);
+         margin: 0 -1px -1px 0;
+         overflow: hidden;
+         width: calc(100% / 3);
+     }
+
+     #galleryGrid_viewer li:first-child {
+     }*/
+
+    .uk-slidenav-contrast {
+        color: #2196f3;
+    }
+
+    .uk-slidenav-contrast:focus, .uk-slidenav-contrast:hover {
+        color: #0277bd;
+    }
 </style>
 <div id="page_content">
     <div id="page_content_inner">
@@ -52,7 +76,7 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled ">
                             <label for="household">Household</label>
-                            <input class="md-input" type="text" id="household" value="0015-001">
+                            <input class="md-input" type="text" id="household" value="0020-002">
                         </div>
                     </div>
                     <div class="uk-width-large-1-3 uk-width-medium-1-1">
@@ -60,6 +84,12 @@
                                 onclick="searchData()">
                             Search
                         </button>
+                        <button type="button" href="javascript:void(0)" class="md-btn md-btn-myPrimary watchvid"
+                                style="display: none"
+                                onclick="watchVideo()">
+                            Watch Video
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -70,49 +100,15 @@
                 <div class="md-card scoreForms" style="display: none">
                     <div class="md-card-content">
                         <div class="uk-slidenav-position" data-uk-slideshow="{animation:'scale'}">
-                            <ul class="uk-slideshow" id="galleryGridas">
-                                <?php if (isset($getData) && $getData != '') {
-                                    foreach ($getData as $k => $v) {
-                                        echo '  <li><img src="https://vcoe1.aku.edu/scans/api/uploads/' . $v->f01 . '" alt=""></li>';
-                                    }
-                                } ?>
+                            <ul class="uk-slideshow" id="galleryGrid_viewer">
                             </ul>
                             <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous"
                                data-uk-slideshow-item="previous"></a>
                             <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next"
                                data-uk-slideshow-item="next"></a>
                         </div>
-                        <div class=" " id="galleryGridasss">
-                            <!-- --><?php /*if (isset($getData) && $getData != '') {
-                        foreach ($getData as $k => $v) {
-                            echo '
-                            <div>
-                            <div class="md-card md-card-hover">
-                                                <div class="gallery_grid_item md-card-content">
-                                                    <a href="https://vcoe1.aku.edu/scans/api/uploads/' . $v->f01 . '" data-uk-lightbox="{group:\'gallery\'}">
-                                                        <img src="https://vcoe1.aku.edu/scans/api/uploads/' . $v->f01 . '" alt="">
-                                                    </a>
-                                                    <div class="gallery_grid_image_caption">
-                                                     <div class="gallery_grid_image_menu" data-uk-dropdown="{pos:\'top-right\'}">
-                                <i class="md-icon material-icons">&#xE5D4;</i>
-                                <div class="uk-dropdown uk-dropdown-small">
-                                    <ul class="uk-nav">
-                                        <li><a href="#"><i class="material-icons uk-margin-small-right">&#xE150;</i>
-                                            Edit</a></li>
-                                        <li><a href="#"><i class="material-icons uk-margin-small-right">&#xE872;</i>
-                                            Remove</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                                                        <span class="gallery_image_title uk-text-truncate">Cluster: ' . $v->cluster_no . '</span>
-                                                        <span class="uk-text-muted uk-text-small">Household: ' . $v->hhno . '</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> ';
-                        }
-                    } */ ?>
-                        </div>
+                        <!-- <div class="docs-pictures clearfix " id="galleryGrid_viewer">
+                         </div>-->
                     </div>
                 </div>
             </div>
@@ -120,6 +116,7 @@
                 <div class="md-card scoreForms" style="display: none">
                     <div class="md-card-content ">
                         <h1 class="heading_a uk-margin-large-top">Dental Scoring:</h1>
+                        <h6 class="heading_a md-color-red-A700 alreadyscored"></h6>
                         <input type="hidden" id="cluster_score" name="cluster_score">
                         <input type="hidden" id="hhno_score" name="hhno_score">
                         <div class="uk-grid uk-grid-divider uk-margin-large-top" data-uk-grid-margin>
@@ -206,19 +203,23 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                         <div class="uk-grid">
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="u_dmft_d" class="uk-text-primary">D: </label>
-                                <input class="md-input" type="number" id="u_dmft_d" name="u_dmft_d" value="0">
+                                <input class="md-input" type="number" id="u_dmft_d" name="u_dmft_d" readonly disabled
+                                       value="0">
                             </div>
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="u_dmft_m" class="uk-text-success">M: </label>
-                                <input class="md-input" type="number" id="u_dmft_m" name="u_dmft_m" value="0">
+                                <input class="md-input" type="number" id="u_dmft_m" name="u_dmft_m" readonly disabled
+                                       value="0">
                             </div>
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="u_dmft_f" class="uk-text-danger">F: </label>
-                                <input class="md-input" type="number" id="u_dmft_f" name="u_dmft_f" value="0">
+                                <input class="md-input" type="number" id="u_dmft_f" name="u_dmft_f" readonly disabled
+                                       value="0">
                             </div>
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="u_dmft_t">Total: </label>
-                                <input class="md-input" type="number" id="u_dmft_t" name="u_dmft_t" value="0">
+                                <input class="md-input" type="number" id="u_dmft_t" name="u_dmft_t" readonly disabled
+                                       value="0">
                             </div>
 
                         </div>
@@ -231,19 +232,23 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                         <div class="uk-grid" data-uk-grid-margin>
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="l_dmft_d" class="uk-text-primary">d: </label>
-                                <input class="md-input" type="number" id="l_dmft_d" name="l_dmft_d" value="0">
+                                <input class="md-input" type="number" id="l_dmft_d" name="l_dmft_d" readonly disabled
+                                       value="0">
                             </div>
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="l_dmft_m" class="uk-text-success">m: </label>
-                                <input class="md-input" type="number" id="l_dmft_m" name="l_dmft_m" value="0">
+                                <input class="md-input" type="number" id="l_dmft_m" name="l_dmft_m" readonly disabled
+                                       value="0">
                             </div>
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="l_dmft_f" class="uk-text-danger">f: </label>
-                                <input class="md-input" type="number" id="l_dmft_f" name="l_dmft_f" value="0">
+                                <input class="md-input" type="number" id="l_dmft_f" name="l_dmft_f" readonly disabled
+                                       value="0">
                             </div>
                             <div class="uk-width-large-1-4 uk-width-medium-1-4">
                                 <label for="l_dmft_t">total: </label>
-                                <input class="md-input" type="number" id="l_dmft_t" name="l_dmft_t" value="0">
+                                <input class="md-input" type="number" id="l_dmft_t" name="l_dmft_t" readonly disabled
+                                       value="0">
                             </div>
                         </div>
                         <div class="uk-grid" data-uk-grid-margin>
@@ -260,7 +265,8 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                         </div>
                         <div class="uk-grid" data-uk-grid-margin>
                             <div class="uk-width-large-1-1 uk-width-medium-1-1">
-                                <button type="button" href="javascript:void(0)" class="md-btn md-btn-primary"
+
+                                <button type="button" href="javascript:void(0)" class="md-btn md-btn-primary submitBtn"
                                         onclick="submitData()">
                                     Submit
                                 </button>
@@ -287,14 +293,37 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
         </div>
 
 
+        <div class="uk-grid videoGrid" style="display: none">
+            <div class="uk-width-large-1-1">
+                <div class="md-card  ">
+                    <div class="md-card-content">
+                        <div class="" id="videoGrid">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+<input type="hidden" id="hidden_loginUser"
+       value="<?php echo(isset($_SESSION['login']['idUser']) && $_SESSION['login']['idUser'] != '' ? $_SESSION['login']['idUser'] : 0) ?>">
+<input type="hidden" id="hidden_id" value="">
 <!-- waitForImages  -->
+
+
 <!--<script src="--><?php //echo base_url() ?><!--assets/js/custom/jquery.waitforimages.min.js"></script>-->
 <!--  gallery functions -->
 <!--<script src="--><?php //echo base_url() ?><!--assets/js/pages/page_gallery.min.js"></script>-->
 
 <script>
+    function watchVideo() {
+        $('.videoGrid').css('display', 'block');
+        $('html, body').animate({
+            scrollTop: $(".videoGrid").offset().top
+        }, 2000);
+    }
 
     function submitData() {
         var data = {};
@@ -344,6 +373,51 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                     }
                 } catch (e) {
                 }
+            } else {
+                notificatonShow('Something went wrong', 'error');
+            }
+        });
+    }
+
+    function editData() {
+        var data = {};
+        data['id'] = $('#hidden_id').val();
+        data['ud'] = $('#u_dmft_d').val();
+        data['um'] = $('#u_dmft_m').val();
+        data['uf'] = $('#u_dmft_f').val();
+        data['ut'] = $('#u_dmft_t').val();
+        data['ld'] = $('#l_dmft_d').val();
+        data['lm'] = $('#l_dmft_m').val();
+        data['lf'] = $('#l_dmft_f').val();
+        data['lt'] = $('#l_dmft_t').val();
+        data['other_observation'] = $('#other_observation').val();
+        var btn = $('.md-btn-mini');
+        var mydata = [];
+        $.each(btn, function (i, v) {
+            var l = $(v).attr('data-level');
+            var id = $(v).attr('data-id');
+            var va = $(v).attr('data-value');
+            var k = l + id;
+
+            var obj = {};
+            obj[k] = va;
+            mydata.push(obj);
+        });
+        data['data'] = mydata;
+        CallAjax('<?php echo base_url()?>index.php/dashboard/editData', data, 'POST', function (res) {
+            if (res != '' && JSON.parse(res).length > 0) {
+                var response = JSON.parse(res);
+                try {
+                    notificatonShow(response[0], response[1]);
+                    if (response[1] === 'success') {
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 1000);
+                    }
+                } catch (e) {
+                }
+            } else {
+                notificatonShow('Something went wrong', 'error');
             }
         });
     }
@@ -390,10 +464,16 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
 
 
     function searchData() {
+        var hidden_loginUser = $('#hidden_loginUser').val();
+        $('.submitBtn').css('display', 'block').text('Submit').attr('onclick', 'submitData()');
+        $('.alreadyscored').text('');
+        $('.watchvid').css('display', 'none');
+        $('.videoGrid').css('display', 'none');
         var btn = $('.md-btn-mini');
         $.each(btn, function (i, v) {
             $(this).attr('data-value', 0).removeClass('md-btn-myPrimary').removeClass('md-btn-success').removeClass('md-btn-danger');
         });
+        $('#hidden_id').val('');
         $('#u_dmft_d').val(0);
         $('#u_dmft_m').val(0);
         $('#u_dmft_f').val(0);
@@ -425,17 +505,18 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                 data: mydata,
                 method: 'POST',
                 success: function (res) {
-                    console.log(res);
+
                     $('.scoreForms').css('display', 'none');
+                    var viditems = '';
                     var items = '';
                     var showForm = 0;
-                    if (res != '' && res != undefined && JSON.parse(res).length > 0) {
+                    if (res != '' && res != undefined) {
                         showForm = 1;
                         var response = JSON.parse(res);
-                        if (response[1].dataExist != '' && response[1].dataExist != undefined && response[1].dataExist != 0) {
-                            notificatonShow(response[1].dataExist[0].cluster + '  cluster already scored', 'info');
+                        if (response['dataExist'][0] != '' && response['dataExist'][0] != undefined && response['dataExist'][0] != 0) {
+                            notificatonShow(mydata['cluster_no'] + '  cluster already scored', 'info');
                             var mycolor = '';
-                            $.each(response[1].dataExist, function (i, v) {
+                            $.each(response['dataExist'][0], function (i, v) {
                                 $.each(v, function (ii, vv) {
                                     if (vv == 1) {
                                         mycolor = 'md-btn-myPrimary';
@@ -459,18 +540,38 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                 $('#l_dmft_f').val(v.lf);
                                 $('#l_dmft_t').val(v.lt);
                                 $('#other_observation').val(v.other_observation).text(v.other_observation);
+
+                                $('.alreadyscored').text('Already scored by: ' + v.createdBy);
+
+                                if (hidden_loginUser == v.createdBy) {
+                                    $('.submitBtn').text('Edit').attr('onclick', 'editData()');
+                                    $('#hidden_id').val(v.id);
+                                } else {
+                                    $('.submitBtn').css('display', 'none');
+                                }
+
                             });
                         }
                         try {
-                            if (response[0] != '' && response[0] != undefined) {
-                                $.each(response[0], function (i, v) {
-                                    var sp = v.f01.split('_');
-                                    items += ' <li><img src="https://vcoe1.aku.edu/scans/api/uploads/' + v.f01 + '" alt=""></li>';
+                            if (response['images'][0] != '' && response['images'][0] != undefined) {
+                                $.each(response['images'][0], function (i, v) {
+                                    // var sp = v.f01.split('_');
+                                    items += ' <li><img src="https://vcoe1.aku.edu/scans/api/uploads/' + v.f01 + '" alt="' + v.f01 + '"></li>';
                                     $('#cluster_score').val(v.cluster_no);
                                     $('#hhno_score').val(v.hhno);
+                                });
+
+                                $.each(response['videos'][0], function (m, k) {
+                                    $('.watchvid').css('display', 'inline-block');
+                                    viditems += '<video width="500" height="240" controls>\n' +
+                                        '  <source src="http://f48605/scans_images/Hyderabad%20Region%20Vidoes/Clusters/' + k.Filename + '" type="video/mp4">\n' +
+                                        'Your browser does not support the video tag.\n' +
+                                        '</video>';
+
                                 })
                             } else {
                                 showForm = 0;
+                                viditems += '<p>No Video</p>';
                                 items += '<li><div>' +
                                     '<div class="md-card-hover">' +
                                     '<div class="gallery_grid_item md-card-content " style="color: red"> No Record Found' +
@@ -485,6 +586,7 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
 
                         }
                     } else {
+                        viditems += '<p>No Video</p>';
                         items += '<li><div>' +
                             '<div class="md-card-hover">' +
                             '<div class="gallery_grid_item md-card-content " style="color: red"> No Record Found' +
@@ -495,11 +597,15 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                     }
 
                     setTimeout(function () {
-                        $('#galleryGridas').html('').html(items);
+
+                        setTimeout(function () {
+                            $('#galleryGrid_viewer').html('').html(items);
+                            // $('#galleryGrid_viewer').viewer();
+                        }, 1000);
+                        $('#videoGrid').html('').html(viditems);
                         if (showForm == 1) {
                             $('.scoreForms').css('display', 'block');
                         }
-
                     }, 500);
                 }
             })
