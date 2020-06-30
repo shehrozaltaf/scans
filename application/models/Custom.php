@@ -23,7 +23,7 @@ class Custom extends CI_Model
     function Insert($Data, $idReturn, $table)
     {
 //        $this->dbs = $this->load->database('scan_f3', TRUE);
-        $insert = $this->dbs->insert($table, $Data);
+        $insert = $this->db->insert($table, $Data);
         if ($insert) {
             $id = $Data[$idReturn];
             if ($id == '') {

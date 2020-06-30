@@ -15,12 +15,26 @@ class MDashboard extends CI_Model
 
     function getData($cluster, $hhno)
     {
-        $this->db->select("cluster_no, hhno, concat('vcoe1.aku.edu\scans\api\uploads\',f01) as img, f01");
+        $this->db->select("dental.cluster_no, 
+        dental.hhno, 
+        concat('vcoe1.aku.edu\scans\api\uploads\',dental.f01) as img, 
+        		dental.f01 
+        ");
         $this->db->from('dental');
-        $this->db->where('f01  !=', '');
-        $this->db->where('cluster_no', $cluster);
+        $this->db->where('dental.f01  !=', '');
+        $this->db->where('dental.cluster_no', $cluster);
+        $this->db->where('dental.hhno', $hhno);
+        $this->db->where("REPLACE(dental.f01, ';', '|') NOT LIKE '%|%'");
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    function checkExistData($cluster, $hhno)
+    {
+        $this->db->select("*");
+        $this->db->from('dental_image_score');
+        $this->db->where('cluster', $cluster);
         $this->db->where('hhno', $hhno);
-        $this->db->where("REPLACE(f01, ';', '|') NOT LIKE '%|%'");
         $query = $this->db->get();
         return $query->result();
     }

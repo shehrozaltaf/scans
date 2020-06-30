@@ -95,7 +95,7 @@ $db['default'] = array(
     'save_queries' => TRUE
 );
 
-/*$db['scan_f3'] = array(
+$db['scan_f3'] = array(
     'dsn' => '',
     'hostname' => 'f38158',
     'username' => 'sa',
@@ -115,5 +115,5 @@ $db['default'] = array(
     'stricton' => FALSE,
     'failover' => array(),
     'save_queries' => TRUE
-);*/
+);
 

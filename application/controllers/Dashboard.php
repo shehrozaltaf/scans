@@ -51,7 +51,17 @@ class Dashboard extends CI_Controller
         $cluster = $_POST['cluster_no'];
         $household = $_POST['household'];
         $getData = $MDashboard->getData($cluster, $household);
-        echo json_encode($getData);
+        $checkExistData = $MDashboard->checkExistData($cluster, $household);
+        $data = array();
+        $data[] = $getData;
+
+        if (isset($checkExistData) && $checkExistData != '' && count($checkExistData) > 0) {
+            $data[]->dataExist = $checkExistData;
+        } else {
+            $data[]->dataExist = '0';
+        }
+
+        echo json_encode($data);
     }
 
     function submitData()

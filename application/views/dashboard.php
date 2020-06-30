@@ -40,7 +40,7 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled">
                             <label for="cluster_no">Cluster</label>
-                            <input class="md-input" type="text" id="cluster_no">
+                            <input class="md-input" type="text" id="cluster_no" value="5901">
                             <!--<select id="cluster_no" name="cluster_no" class="md-input">
                                 <option value="0">select cluster</option>
                                 <?php /*foreach ($getClusters as $c) {
@@ -52,7 +52,7 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled ">
                             <label for="household">Household</label>
-                            <input class="md-input" type="text" id="household">
+                            <input class="md-input" type="text" id="household" value="0015-001">
                         </div>
                     </div>
                     <div class="uk-width-large-1-3 uk-width-medium-1-1">
@@ -129,13 +129,13 @@
                                     <div class="">
                                         <?php for ($i = 55; $i >= 51; $i--) {
                                             echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="u"  onclick="setValue(this)"
-class="my-btn md-btn md-btn-wave md-btn-mini " >' . $i . ' <!--<span class="uk-badge">16</span>--></a>';
+class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '" >' . $i . ' <!--<span class="uk-badge">16</span>--></a>';
                                         } ?>
                                     </div>
                                     <div class="">
                                         <?php for ($i = 17; $i >= 11; $i--) {
                                             echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="u"  onclick="setValue(this)"
-class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
+class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                 </div>
@@ -147,13 +147,13 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
                                     <div class="">
                                         <?php for ($i = 61; $i <= 65; $i++) {
                                             echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="u"  onclick="setValue(this)"
- class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
+ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                     <div class="">
                                         <?php for ($i = 21; $i <= 27; $i++) {
                                             echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="u" onclick="setValue(this)"
- class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
+ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                 </div>
@@ -166,13 +166,13 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
                                     <div class="">
                                         <?php for ($i = 85; $i >= 81; $i--) {
                                             echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="l" onclick="setValue(this)" 
-                                             class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
+                                             class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                     <div class="">
                                         <?php for ($i = 47; $i >= 41; $i--) {
                                             echo '<a href="javascript:void(0)" data-id="' . $i . '" data-value="0" data-level="l" onclick="setValue(this)"
-                                             class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
+                                             class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                 </div>
@@ -184,13 +184,13 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
                                     <div class="">
                                         <?php for ($i = 71; $i <= 75; $i++) {
                                             echo '<a href="javascript:void(0)" data-id="' . $i . '" data-value="0" data-level="l" 
-                                            onclick="setValue(this)" class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
+                                            onclick="setValue(this)" class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                     <div class="">
                                         <?php for ($i = 31; $i <= 37; $i++) {
                                             echo '<a href="javascript:void(0)" data-id="' . $i . '" data-value="0" data-level="l"  data-value="0"
-                                             onclick="setValue(this)" class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
+                                             onclick="setValue(this)" class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                 </div>
@@ -249,10 +249,10 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
                         <div class="uk-grid" data-uk-grid-margin>
                             <div class="uk-width-large-1-1 uk-width-medium-1-1">
                                 <div class="uk-form-row">
-                                    <div class="md-input-wrapper md-input-filled">
+                                    <div class="md-input-wrapper md-input-filled md-input-focus">
                                         <label for="other_observation">Other Observation:</label>
                                         <textarea cols="100" rows="4" id="other_observation" name="other_observation"
-                                                  class="md-input autosized"></textarea>
+                                                  class="md-input autosized "></textarea>
                                         <span class="md-input-bar "></span>
                                     </div>
                                 </div>
@@ -390,6 +390,21 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
 
 
     function searchData() {
+        var btn = $('.md-btn-mini');
+        $.each(btn, function (i, v) {
+            $(this).attr('data-value', 0).removeClass('md-btn-myPrimary').removeClass('md-btn-success').removeClass('md-btn-danger');
+        });
+        $('#u_dmft_d').val(0);
+        $('#u_dmft_m').val(0);
+        $('#u_dmft_f').val(0);
+        $('#u_dmft_t').val(0);
+        $('#l_dmft_d').val(0);
+        $('#l_dmft_m').val(0);
+        $('#l_dmft_f').val(0);
+        $('#l_dmft_t').val(0);
+        $('#other_observation').val('').text('');
+
+
         $("#cluster_no").removeClass('error');
         $("#household").removeClass('error');
         var mydata = {};
@@ -410,45 +425,73 @@ class="my-btn md-btn md-btn-wave md-btn-mini">' . $i . '</a>';
                 data: mydata,
                 method: 'POST',
                 success: function (res) {
+                    console.log(res);
                     $('.scoreForms').css('display', 'none');
                     var items = '';
                     var showForm = 0;
-                    if (res != '' && JSON.parse(res).length > 0) {
+                    if (res != '' && res != undefined && JSON.parse(res).length > 0) {
                         showForm = 1;
                         var response = JSON.parse(res);
+                        if (response[1].dataExist != '' && response[1].dataExist != undefined && response[1].dataExist != 0) {
+                            notificatonShow(response[1].dataExist[0].cluster + '  cluster already scored', 'info');
+                            var mycolor = '';
+                            $.each(response[1].dataExist, function (i, v) {
+                                $.each(v, function (ii, vv) {
+                                    if (vv == 1) {
+                                        mycolor = 'md-btn-myPrimary';
+                                    } else if (vv == 2) {
+                                        mycolor = 'md-btn-success';
+                                    } else if (vv == 3) {
+                                        mycolor = 'md-btn-danger';
+                                    } else {
+                                        mycolor = '';
+                                    }
+                                    $('.' + ii).attr('data-value', vv).addClass(mycolor);
+
+                                });
+
+                                $('#u_dmft_d').val(v.ud);
+                                $('#u_dmft_m').val(v.um);
+                                $('#u_dmft_f').val(v.uf);
+                                $('#u_dmft_t').val(v.ut);
+                                $('#l_dmft_d').val(v.ld);
+                                $('#l_dmft_m').val(v.lm);
+                                $('#l_dmft_f').val(v.lf);
+                                $('#l_dmft_t').val(v.lt);
+                                $('#other_observation').val(v.other_observation).text(v.other_observation);
+                            });
+                        }
                         try {
-                            $.each(response, function (i, v) {
-                                var sp = v.f01.split('_');
-                                /* items += '<div>' +
-                                     '<div class="md-card md-card-hover">' +
-                                     '<div class="gallery_grid_item md-card-content">' +
-                                     '<a href="https://vcoe1.aku.edu/scans/api/uploads/' + v.f01 + '" ' +
-                                     'data-uk-lightbox="{group:\\\'gallery\\\'}">' +
-                                     '<img src="https://vcoe1.aku.edu/scans/api/uploads/' + v.f01 + '" alt="">' +
-                                     ' </a>' +
-                                     ' <div class="gallery_grid_image_caption"> ' +
-                                     '<span class="gallery_image_title uk-text-truncate">Image No: ' + sp[2] + '</span>' +
-                                     ' <span class="uk-text-muted uk-text-small">Cluster: ' + v.cluster_no + '</span>' +
-                                     ' <span class="uk-text-muted uk-text-small">Household: ' + v.hhno + '</span><br>' +
-                                     ' <span class="uk-text-muted uk-text-small">Image URL: https://vcoe1.aku.edu/scans/api/uploads/' + v.f01 + '</span>' +
-                                     '</div>' +
-                                     '</div>' +
-                                     '</div>' +
-                                     '</div>';*/
-                                items += ' <li><img src="https://vcoe1.aku.edu/scans/api/uploads/' + v.f01 + '" alt=""></li>';
-                                $('#cluster_score').val(v.cluster_no);
-                                $('#hhno_score').val(v.hhno);
-                            })
+                            if (response[0] != '' && response[0] != undefined) {
+                                $.each(response[0], function (i, v) {
+                                    var sp = v.f01.split('_');
+                                    items += ' <li><img src="https://vcoe1.aku.edu/scans/api/uploads/' + v.f01 + '" alt=""></li>';
+                                    $('#cluster_score').val(v.cluster_no);
+                                    $('#hhno_score').val(v.hhno);
+                                })
+                            } else {
+                                showForm = 0;
+                                items += '<li><div>' +
+                                    '<div class="md-card-hover">' +
+                                    '<div class="gallery_grid_item md-card-content " style="color: red"> No Record Found' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div></li>';
+
+                                notificatonShow('No Record Found', 'error');
+                            }
+
                         } catch (e) {
+
                         }
                     } else {
-
                         items += '<li><div>' +
                             '<div class="md-card-hover">' +
                             '<div class="gallery_grid_item md-card-content " style="color: red"> No Record Found' +
                             '</div>' +
                             '</div>' +
                             '</div></li>';
+                        notificatonShow('No Record Found', 'error');
                     }
 
                     setTimeout(function () {
