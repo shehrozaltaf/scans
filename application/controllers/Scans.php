@@ -97,10 +97,24 @@ class Scans extends MX_Controller
 					sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
 					sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
 					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
+					(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus != '') as collected_households,
+				
+				(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus = '1') as completed_households,
 					(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
 					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs,
+					(SELECT CAST ( COUNT (indexMwra._uid) AS VARCHAR ) + '/' + CAST (COUNT(child._uid) AS VARCHAR) AS mc_cnt
+FROM forms
+LEFT JOIN indexMwra ON forms._uid = indexMwra._uuid
+AND forms.formdate = indexMwra.formdate
+LEFT JOIN child ON forms._uid = child._uuid
+AND forms.formdate = child.formdate
+WHERE forms.istatus=1 and SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and	forms.cluster_code = l.hh02 
+GROUP BY
+	forms.cluster_code) as mc_cnt
 					from clusters c
 					left join listings l on l.hh02 = c.cluster_no
 					where l.enumcode = '$d' and (c.randomized = '1' or c.randomized = '2')
@@ -116,10 +130,24 @@ class Scans extends MX_Controller
 					sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
 					sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
 					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
+					(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus != '') as collected_households,
+				
+				(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus = '1') as completed_households,
 					(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
 					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs,
+					(SELECT CAST ( COUNT (indexMwra._uid) AS VARCHAR ) + '/' + CAST (COUNT(child._uid) AS VARCHAR) AS mc_cnt
+FROM forms
+LEFT JOIN indexMwra ON forms._uid = indexMwra._uuid
+AND forms.formdate = indexMwra.formdate
+LEFT JOIN child ON forms._uid = child._uuid
+AND forms.formdate = child.formdate
+WHERE forms.istatus=1 and SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and	forms.cluster_code = l.hh02 
+GROUP BY
+	forms.cluster_code) as mc_cnt
 					from clusters c
 					left join listings l on l.hh02 = c.cluster_no
 					where l.enumcode = '$d' and (c.randomized = '1' or c.randomized = '2')
@@ -136,10 +164,24 @@ class Scans extends MX_Controller
 					sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
 					sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
 					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
+					(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus != '') as collected_households,
+				
+				(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus = '1') as completed_households,
 					(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
 					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs,
+					(SELECT CAST ( COUNT (indexMwra._uid) AS VARCHAR ) + '/' + CAST (COUNT(child._uid) AS VARCHAR) AS mc_cnt
+FROM forms
+LEFT JOIN indexMwra ON forms._uid = indexMwra._uuid
+AND forms.formdate = indexMwra.formdate
+LEFT JOIN child ON forms._uid = child._uuid
+AND forms.formdate = child.formdate
+WHERE forms.istatus=1 and SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and	forms.cluster_code = l.hh02 
+GROUP BY
+	forms.cluster_code) as mc_cnt
 					from clusters c
 					left join listings l on l.hh02 = c.cluster_no
 					where l.enumcode = '$d' and (c.randomized = '1' or c.randomized = '2')
@@ -157,10 +199,28 @@ class Scans extends MX_Controller
 				sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
 				sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
 				(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-				(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
+				
+				(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus != '') as collected_households,
+				
+				(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus = '1') as completed_households,
+				
 				(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
 				(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs,
+				
+				(SELECT CAST ( COUNT (indexMwra._uid) AS VARCHAR ) + '/' + CAST (COUNT(child._uid) AS VARCHAR) AS mc_cnt
+FROM forms
+LEFT JOIN indexMwra ON forms._uid = indexMwra._uuid
+AND forms.formdate = indexMwra.formdate
+LEFT JOIN child ON forms._uid = child._uuid
+AND forms.formdate = child.formdate
+WHERE forms.istatus=1 and SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and	forms.cluster_code = l.hh02 
+GROUP BY
+	forms.cluster_code) as mc_cnt
+	
 				from clusters c
 				left join listings l on l.hh02 = c.cluster_no
 				where (c.randomized = '1' or c.randomized = '2')
@@ -236,10 +296,24 @@ class Scans extends MX_Controller
 			sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
 			sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
 			(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-			(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
+			(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus != '') as collected_households,
+				
+				(select count(distinct _uid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and cluster_code = l.hh02 and istatus = '1') as completed_households,
 			(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
 			(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs,
+			(SELECT CAST ( COUNT (indexMwra._uid) AS VARCHAR ) + '/' + CAST (COUNT(child._uid) AS VARCHAR) AS mc_cnt
+FROM forms
+LEFT JOIN indexMwra ON forms._uid = indexMwra._uuid
+AND forms.formdate = indexMwra.formdate
+LEFT JOIN child ON forms._uid = child._uuid
+AND forms.formdate = child.formdate
+WHERE forms.istatus=1 and SUBSTRING(cluster_code, 1, 1) = l.enumcode 
+				and	forms.cluster_code = l.hh02 
+GROUP BY
+	forms.cluster_code) as mc_cnt
 			from clusters c
 			left join listings l on l.hh02 = c.cluster_no
 			where l.enumcode = '$district' and (c.randomized = '1' or c.randomized = '2')
