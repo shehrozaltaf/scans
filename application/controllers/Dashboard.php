@@ -56,13 +56,11 @@ class Dashboard extends CI_Controller
         $data = array();
         $data['images'][] = $getData;
         $data['videos'][] = $getVidData;
-
         if (isset($checkExistData) && $checkExistData != '' && count($checkExistData) > 0) {
             $data['dataExist'][] = $checkExistData;
         } else {
             $data['dataExist'][] = '0';
         }
-
         echo json_encode($data);
     }
 
@@ -127,7 +125,6 @@ class Dashboard extends CI_Controller
                 $insertArr[$k] = $v;
             }
         }
-
         $editData = $Custom->Edit($insertArr, 'id', $id, 'dental_image_score');
         if ($editData) {
             $response = array('Edited Successfully', 'success');

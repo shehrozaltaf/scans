@@ -514,43 +514,74 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                         showForm = 1;
                         var response = JSON.parse(res);
                         if (response['dataExist'][0] != '' && response['dataExist'][0] != undefined && response['dataExist'][0] != 0) {
-                            notificatonShow(mydata['cluster_no'] + '  cluster already scored', 'info');
-                            var mycolor = '';
-                            $.each(response['dataExist'][0], function (i, v) {
-                                $.each(v, function (ii, vv) {
-                                    if (vv == 1) {
-                                        mycolor = 'md-btn-myPrimary';
-                                    } else if (vv == 2) {
-                                        mycolor = 'md-btn-success';
-                                    } else if (vv == 3) {
-                                        mycolor = 'md-btn-danger';
+                            if (hidden_loginUser == 'komalashfaque') {
+
+                                var mycolors = '';
+                                $.each(response['dataExist'][0], function (i, v) {
+                                    if (v.createdBy == 'komalashfaque') {
+                                        $.each(v, function (ii, vv) {
+                                            if (vv == 1) {
+                                                mycolors = 'md-btn-myPrimary';
+                                            } else if (vv == 2) {
+                                                mycolors = 'md-btn-success';
+                                            } else if (vv == 3) {
+                                                mycolors = 'md-btn-danger';
+                                            } else {
+                                                mycolors = '';
+                                            }
+                                            $('.' + ii).attr('data-value', vv).addClass(mycolors);
+                                        });
+                                        $('#u_dmft_d').val(v.ud);
+                                        $('#u_dmft_m').val(v.um);
+                                        $('#u_dmft_f').val(v.uf);
+                                        $('#u_dmft_t').val(v.ut);
+                                        $('#l_dmft_d').val(v.ld);
+                                        $('#l_dmft_m').val(v.lm);
+                                        $('#l_dmft_f').val(v.lf);
+                                        $('#l_dmft_t').val(v.lt);
+                                        $('#other_observation').val(v.other_observation).text(v.other_observation);
+                                        $('.alreadyscored').text('Already scored by: ' + v.createdBy);
+                                        $('.submitBtn').text('Edit').attr('onclick', 'editData()');
+                                        $('#hidden_id').val(v.id);
+                                        notificatonShow(mydata['cluster_no'] + '  cluster already scored', 'info');
                                     } else {
-                                        mycolor = '';
+                                        $('.submitBtn').css('display', 'block');
                                     }
-                                    $('.' + ii).attr('data-value', vv).addClass(mycolor);
-
                                 });
-
-                                $('#u_dmft_d').val(v.ud);
-                                $('#u_dmft_m').val(v.um);
-                                $('#u_dmft_f').val(v.uf);
-                                $('#u_dmft_t').val(v.ut);
-                                $('#l_dmft_d').val(v.ld);
-                                $('#l_dmft_m').val(v.lm);
-                                $('#l_dmft_f').val(v.lf);
-                                $('#l_dmft_t').val(v.lt);
-                                $('#other_observation').val(v.other_observation).text(v.other_observation);
-
-                                $('.alreadyscored').text('Already scored by: ' + v.createdBy);
-
-                                if (hidden_loginUser == v.createdBy) {
-                                    $('.submitBtn').text('Edit').attr('onclick', 'editData()');
-                                    $('#hidden_id').val(v.id);
-                                } else {
-                                    $('.submitBtn').css('display', 'none');
-                                }
-
-                            });
+                            } else {
+                                notificatonShow(mydata['cluster_no'] + '  cluster already scored', 'info');
+                                var mycolor = '';
+                                $.each(response['dataExist'][0], function (i, v) {
+                                    $.each(v, function (ii, vv) {
+                                        if (vv == 1) {
+                                            mycolor = 'md-btn-myPrimary';
+                                        } else if (vv == 2) {
+                                            mycolor = 'md-btn-success';
+                                        } else if (vv == 3) {
+                                            mycolor = 'md-btn-danger';
+                                        } else {
+                                            mycolor = '';
+                                        }
+                                        $('.' + ii).attr('data-value', vv).addClass(mycolor);
+                                    });
+                                    $('#u_dmft_d').val(v.ud);
+                                    $('#u_dmft_m').val(v.um);
+                                    $('#u_dmft_f').val(v.uf);
+                                    $('#u_dmft_t').val(v.ut);
+                                    $('#l_dmft_d').val(v.ld);
+                                    $('#l_dmft_m').val(v.lm);
+                                    $('#l_dmft_f').val(v.lf);
+                                    $('#l_dmft_t').val(v.lt);
+                                    $('#other_observation').val(v.other_observation).text(v.other_observation);
+                                    $('.alreadyscored').text('Already scored by: ' + v.createdBy);
+                                    if (hidden_loginUser == v.createdBy) {
+                                        $('.submitBtn').text('Edit').attr('onclick', 'editData()');
+                                        $('#hidden_id').val(v.id);
+                                    } else {
+                                        $('.submitBtn').css('display', 'none');
+                                    }
+                                });
+                            }
                         }
                         try {
                             if (response['images'][0] != '' && response['images'][0] != undefined) {

@@ -36,7 +36,7 @@ class MDashboard extends CI_Model
 
     function getVidData($cluster, $hhno)
     {
-        $this->db = $this->load->database('scan_f3', TRUE);
+//        $this->db = $this->load->database('scan_f3', TRUE);
         $this->db->select("*");
         $this->db->from('dental_vdo');
         $this->db->where('Filename  !=', '');
@@ -48,7 +48,7 @@ class MDashboard extends CI_Model
 
     function checkExistData($cluster, $hhno)
     {
-        $this->db = $this->load->database('scan_f3', TRUE);
+//        $this->db = $this->load->database('scan_f3', TRUE);
         $this->db->select("*");
         $this->db->from('dental_image_score');
         $this->db->where('cluster', $cluster);
