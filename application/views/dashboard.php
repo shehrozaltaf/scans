@@ -64,7 +64,7 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled">
                             <label for="cluster_no">Cluster</label>
-                            <input class="md-input" type="text" id="cluster_no" value="5901">
+                            <input class="md-input" type="text" id="cluster_no">
                             <!--<select id="cluster_no" name="cluster_no" class="md-input">
                                 <option value="0">select cluster</option>
                                 <?php /*foreach ($getClusters as $c) {
@@ -76,7 +76,7 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled ">
                             <label for="household">Household</label>
-                            <input class="md-input" type="text" id="household" value="0020-002">
+                            <input class="md-input" type="text" id="household">
                         </div>
                     </div>
                     <div class="uk-width-large-1-3 uk-width-medium-1-1">
@@ -125,8 +125,8 @@
                                     <h1 class="text-center uk-text-large">UR</h1>
                                     <div class="">
                                         <?php for ($i = 55; $i >= 51; $i--) {
-                                            echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="u"  onclick="setValue(this)"
-class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '" >' . $i . ' <!--<span class="uk-badge">16</span>--></a>';
+                                            echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="l"  onclick="setValue(this)"
+class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '" >' . $i . ' <!--<span class="uk-badge">16</span>--></a>';
                                         } ?>
                                     </div>
                                     <div class="">
@@ -143,8 +143,8 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                     <h3 class="text-center uk-text-large">UL</h3>
                                     <div class="">
                                         <?php for ($i = 61; $i <= 65; $i++) {
-                                            echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="u"  onclick="setValue(this)"
- class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
+                                            echo '<a href="javascript:void(0)"  data-id="' . $i . '" data-value="0" data-level="l"  onclick="setValue(this)"
+ class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                     <div class="">
@@ -168,8 +168,8 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                     </div>
                                     <div class="">
                                         <?php for ($i = 47; $i >= 41; $i--) {
-                                            echo '<a href="javascript:void(0)" data-id="' . $i . '" data-value="0" data-level="l" onclick="setValue(this)"
-                                             class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '">' . $i . '</a>';
+                                            echo '<a href="javascript:void(0)" data-id="' . $i . '" data-value="0" data-level="u" onclick="setValue(this)"
+                                             class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                 </div>
@@ -186,8 +186,8 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                     </div>
                                     <div class="">
                                         <?php for ($i = 31; $i <= 37; $i++) {
-                                            echo '<a href="javascript:void(0)" data-id="' . $i . '" data-value="0" data-level="l"  data-value="0"
-                                             onclick="setValue(this)" class="my-btn md-btn md-btn-wave md-btn-mini l' . $i . '">' . $i . '</a>';
+                                            echo '<a href="javascript:void(0)" data-id="' . $i . '" data-value="0" data-level="u"  data-value="0"
+                                             onclick="setValue(this)" class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                         } ?>
                                     </div>
                                 </div>
@@ -564,7 +564,7 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
                                 $.each(response['videos'][0], function (m, k) {
                                     $('.watchvid').css('display', 'inline-block');
                                     viditems += '<video width="500" height="240" controls>\n' +
-                                        '  <source src="http://f48605/scans_images/Hyderabad%20Region%20Vidoes/Clusters/' + k.Filename + '" type="video/mp4">\n' +
+                                        '  <source src="https://vcoe1.aku.edu/scans/api/v_uploads/' + mydata['cluster_no'] + '/' + k.Filename + '" type="video/mp4">\n' +
                                         'Your browser does not support the video tag.\n' +
                                         '</video>';
 

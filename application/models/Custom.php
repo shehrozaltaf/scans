@@ -22,7 +22,7 @@ class Custom extends CI_Model
 
     function Insert($Data, $idReturn, $table)
     {
-//        $this->dbs = $this->load->database('scan_f3', TRUE);
+        $this->db = $this->load->database('scan_f3', TRUE);
         $insert = $this->db->insert($table, $Data);
         if ($insert) {
             $id = $Data[$idReturn];
@@ -39,6 +39,7 @@ class Custom extends CI_Model
 
     function Edit($Data, $key, $value, $table)
     {
+        $this->db = $this->load->database('scan_f3', TRUE);
         $this->db->where($key, $value);
         $update = $this->db->update($table, $Data);
         if ($update) {

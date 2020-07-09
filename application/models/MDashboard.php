@@ -25,6 +25,10 @@ class MDashboard extends CI_Model
         $this->db->where('dental.f01  !=', '');
         $this->db->where('dental.cluster_no', $cluster);
         $this->db->where('dental.hhno', $hhno);
+        /*$this->db->where_not_in('dental.username', "user0001");
+        $this->db->where_not_in('dental.username', "user0002");
+        $this->db->where_not_in('dental.username', "user0003");
+        $this->db->where_not_in('dental.username', "dmu@aku");*/
         $this->db->where("REPLACE(dental.f01, ';', '|') NOT LIKE '%|%'");
         $query = $this->db->get();
         return $query->result();
@@ -32,18 +36,19 @@ class MDashboard extends CI_Model
 
     function getVidData($cluster, $hhno)
     {
-        $this->scan_f3 = $this->load->database('scan_f3', true);
-        $this->scan_f3->select("*");
-        $this->scan_f3->from('dental_vdo');
-        $this->scan_f3->where('Filename  !=', '');
-        $this->scan_f3->where('cluster', $cluster);
-        $this->scan_f3->where('hhno', $hhno);
-        $query = $this->scan_f3->get();
+        $this->db = $this->load->database('scan_f3', TRUE);
+        $this->db->select("*");
+        $this->db->from('dental_vdo');
+        $this->db->where('Filename  !=', '');
+        $this->db->where('cluster', $cluster);
+        $this->db->where('hhno', $hhno);
+        $query = $this->db->get();
         return $query->result();
     }
 
     function checkExistData($cluster, $hhno)
     {
+        $this->db = $this->load->database('scan_f3', TRUE);
         $this->db->select("*");
         $this->db->from('dental_image_score');
         $this->db->where('cluster', $cluster);

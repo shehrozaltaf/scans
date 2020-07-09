@@ -21,7 +21,7 @@ class Dashboard extends CI_Controller
 
     function showDir()
     {
-        $dir = 'C:\xampp\htdocs\scans_images\Hyderabad Region Vidoes\Clusters';
+        $dir = 'C:\xampp\htdocs\scans_images\Hyderabad Region Vidoes\Hyd Sindh Dental Videos\3107';
         $files1 = scandir($dir);
         $a = '';
         foreach ($files1 as $v) {
