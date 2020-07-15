@@ -17,6 +17,11 @@
                     <span class="menu_title">Dashboard</span>
                 </a>
             </li>
+            <li title="Users">
+                <a href="<?php echo base_url('index.php/Reviewed') ?>">
+                    <span class="menu_title">Reviewed</span>
+                </a>
+            </li>
             <li title="Clusters">
                 <a href="<?php echo base_url('index.php/dashboard/Clusters') ?>">
                     <span class="menu_title">Clusters</span>
@@ -27,11 +32,13 @@
                     <span class="menu_title">Household</span>
                 </a>
             </li>
+
             <li title="Users">
                 <a href="<?php echo base_url('index.php/Users') ?>">
                     <span class="menu_title">Users</span>
                 </a>
             </li>
+
             <li title="Logout">
                 <a href="javascript:void(0)" onclick="logout()">
                     <span class="menu_title">Logout</span>
