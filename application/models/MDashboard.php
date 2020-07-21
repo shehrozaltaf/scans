@@ -69,11 +69,23 @@ class MDashboard extends CI_Model
 
     function getHousehold($cluster)
     {
-        $this->db->select("cluster_no, hhno");
+        $this->db->select("dental.cluster_no, dental.hhno, dental_image_score.cluster as scored");
         $this->db->from('dental');
+        $this->db->join('dental_image_score', 'dental.cluster_no = dental_image_score.cluster AND dental.hhno = dental_image_score.hhno', 'left');
+
         $this->db->where('cluster_no', $cluster);
-        $this->db->group_by('cluster_no, hhno');
+        $this->db->group_by('dental.cluster_no, dental.hhno, dental_image_score.cluster');
         $this->db->order_by('cluster_no', 'desc');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    function getTotalScoredCnt()
+    {
+        $this->db->select("count(*) as totalCnt, createdBy");
+        $this->db->from('dental_image_score');
+        $this->db->group_by('createdBy ');
+        $this->db->order_by(' totalCnt', 'desc');
         $query = $this->db->get();
         return $query->result();
     }

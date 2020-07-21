@@ -16,7 +16,7 @@ class Login extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('mlogin');
         if (isset($_SESSION['login']['idUser'])) {
-            redirect(base_url('dashboard'));
+            redirect(base_url('index.php/dashboard'));
         }
     }
 
@@ -24,9 +24,9 @@ class Login extends CI_Controller
     {
         $SeesionInfo = $this->session->all_userdata();
         if (isset($_SESSION['login']['idUser'])) {
-            redirect(base_url('dashboard'));
+            redirect(base_url('index.php/dashboard'));
         } else {
-            $this->load->view('login');
+            $this->load->view('index.php/login');
         }
     }
 

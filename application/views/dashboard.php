@@ -2,7 +2,6 @@
 <script src="<?php echo base_url() ?>assets/bower_components/viewerjs/viewer.js"></script>
 <script src="<?php echo base_url() ?>assets/bower_components/viewerjs/jquery-viewer.min.js"></script>
 
-
 <style>
     .error {
         border-bottom: 1px solid red !important;
@@ -64,7 +63,14 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled">
                             <label for="cluster_no">Cluster</label>
-                            <input class="md-input" type="text" id="cluster_no">
+                            <?php
+                            if (isset($_GET['cluster']) && $_GET['cluster'] != '') {
+                                $clu = $_GET['cluster'];
+                            } else {
+                                $clu = '';
+                            }
+                            ?>
+                            <input class="md-input" type="text" id="cluster_no" value="<?php echo $clu; ?>">
                             <!--<select id="cluster_no" name="cluster_no" class="md-input">
                                 <option value="0">select cluster</option>
                                 <?php /*foreach ($getClusters as $c) {
@@ -76,7 +82,17 @@
                     <div class="uk-width-large-1-2 uk-width-1-2">
                         <div class="md-input-wrapper md-input-filled ">
                             <label for="household">Household</label>
-                            <input class="md-input" type="text" id="household">
+                            <?php
+                            if (isset($_GET['hh']) && $_GET['hh'] != '') {
+                                $onLoad = 1;
+                                $hh = $_GET['hh'];
+                            } else {
+                                $onLoad = 0;
+                                $hh = '';
+                            }
+                            ?>
+                            <input class="md-input" type="text" id="household" value="<?php echo $hh; ?>">
+                            <input class="md-input" type="hidden" id="onLoadSearch" value="<?php echo $onLoad; ?>">
                         </div>
                     </div>
                     <div class="uk-width-large-1-3 uk-width-medium-1-1">
@@ -318,6 +334,15 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
 <!--<script src="--><?php //echo base_url() ?><!--assets/js/pages/page_gallery.min.js"></script>-->
 
 <script>
+
+    $(document).ready(function () {
+
+        var onLoadSearch = $('#onLoadSearch').val();
+        if (onLoadSearch == 1) {
+            searchData();
+        }
+
+    });
     function watchVideo() {
         $('.videoGrid').css('display', 'block');
         $('html, body').animate({
@@ -461,7 +486,6 @@ class="my-btn md-btn md-btn-wave md-btn-mini u' . $i . '">' . $i . '</a>';
 
 
     }
-
 
     function searchData() {
         var hidden_loginUser = $('#hidden_loginUser').val();

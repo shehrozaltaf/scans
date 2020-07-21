@@ -42,6 +42,7 @@
                         <th>S No.</th>
                         <th>Cluster</th>
                         <th>Household</th>
+                        <th>Scored</th>
                     </tr>
 
                     </thead>
@@ -51,10 +52,16 @@
                     $s = 0;
                     foreach ($getData as $key => $value) {
                         $s++;
+                        if (isset($value->scored) && $value->scored != '') {
+                            $sc = 'Completed';
+                        } else {
+                            $sc = '<a href="' . base_url() . 'index.php/dashboard?cluster=' . $value->cluster_no . '&hh=' . $value->hhno . '" target="_blank">View Household</a>';
+                        }
                         echo '<tr> 
                         <td>' . $s . '</td> 
                         <td>' . $value->cluster_no . '</td>
                         <td>' . $value->hhno . '</td> 
+                        <td>' . $sc . '</td>  
                       </tr>';
                     } ?>
                     </tbody>
@@ -64,6 +71,7 @@
                         <th>S No.</th>
                         <th>Cluster</th>
                         <th>Household</th>
+                        <th>Scored</th>
                     </tr>
                     </tfoot>
                 </table>

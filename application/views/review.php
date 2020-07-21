@@ -9,8 +9,8 @@
                         <th>S No.</th>
                         <th>Cluster</th>
                         <th>Household</th>
-                        <th>Reviewed By</th>
-                        <th>Reviewed Date Time</th>
+                        <th>Scored By</th>
+                        <th>Scored Date Time</th>
                         <th>Review</th>
                     </tr>
 
@@ -37,8 +37,8 @@
                         <th>S No.</th>
                         <th>Cluster</th>
                         <th>Household</th>
-                        <th>Reviewed By</th>
-                        <th>Reviewed Date Time</th>
+                        <th>Scored By</th>
+                        <th>Scored Date Time</th>
                         <th>Review</th>
                     </tr>
                     </tfoot>

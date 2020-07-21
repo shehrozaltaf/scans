@@ -15,7 +15,7 @@ class Dashboard extends CI_Controller
         parent::__construct();
         $this->load->model('mdashboard');
         if (!isset($_SESSION['login']['idUser'])) {
-            redirect(base_url('login'));
+            redirect(base_url('index.php/login'));
         }
     }
 
