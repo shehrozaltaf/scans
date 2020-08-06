@@ -52,11 +52,21 @@
                     $s = 0;
                     foreach ($getData as $key => $value) {
                         $s++;
-                        if (isset($value->scored) && $value->scored != '') {
-                            $sc = 'Completed';
+                        if (isset($_SESSION['login']['idUser']) && $_SESSION['login']['idUser'] == 'komalashfaque') {
+                            if (isset($value->scored) && $value->scored != '' && $value->scoredBy == 'komalashfaque') {
+                                $sc = 'Completed';
+                            } else {
+                                $sc = '<a href="' . base_url() . 'index.php/dashboard?cluster=' . $value->cluster_no . '&hh=' . $value->hhno . '" target="_blank">Pending</a>';
+                            }
                         } else {
-                            $sc = '<a href="' . base_url() . 'index.php/dashboard?cluster=' . $value->cluster_no . '&hh=' . $value->hhno . '" target="_blank">View Household</a>';
+                            if (isset($value->scored) && $value->scored != '') {
+                                $sc = 'Completed';
+                            } else {
+                                $sc = '<a href="' . base_url() . 'index.php/dashboard?cluster=' . $value->cluster_no . '&hh=' . $value->hhno . '" target="_blank">Pending</a>';
+                            }
                         }
+
+
                         echo '<tr> 
                         <td>' . $s . '</td> 
                         <td>' . $value->cluster_no . '</td>

@@ -26,7 +26,7 @@ class Login extends CI_Controller
         if (isset($_SESSION['login']['idUser'])) {
             redirect(base_url('index.php/dashboard'));
         } else {
-            $this->load->view('index.php/login');
+            $this->load->view('login');
         }
     }
 
