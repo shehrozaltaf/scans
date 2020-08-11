@@ -158,8 +158,31 @@ class Dashboard extends CI_Controller
         }
 
         $getData['getClusters'] = $MDashboard->getClusters();
-        $getData['getData'] = $MDashboard->getHousehold($cluster);
+        $getHousehold = $MDashboard->getHousehold($cluster);
         $getData['slug'] = $slug;
+        $result = array();
+        if (isset($_SESSION['login']['idUser']) && $_SESSION['login']['idUser'] == 'komalashfaque') {
+            foreach ($getHousehold as $k => $v) {
+                if ($v->scoredBy == 'komalashfaque') {
+                    $result[$v->hhno] = $v;
+                } else {
+                    if (!isset($result[$v->hhno])) {
+                        $result[$v->hhno] = $v;
+                    }
+                }
+            }
+        } else {
+            foreach ($getHousehold as $k => $v) {
+                if ($v->scoredBy != 'komalashfaque') {
+                    $result[] = $v;
+                }
+            }
+        }
+
+        /*  echo '<pre>';
+          print_r($result);
+          echo '</pre>';*/
+        $getData['getData'] = $result;
         $this->load->view('include/header');
         $this->load->view('include/nav');
         $this->load->view('household', $getData);

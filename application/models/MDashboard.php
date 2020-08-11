@@ -74,6 +74,12 @@ class MDashboard extends CI_Model
         $this->db->join('dental_image_score', 'dental.cluster_no = dental_image_score.cluster AND dental.hhno = dental_image_score.hhno', 'left');
 
         $this->db->where('cluster_no', $cluster);
+        /*if (isset($_SESSION['login']['idUser']) && $_SESSION['login']['idUser'] == 'komalashfaque') {
+            $this->db->where(" (dental_image_score.createdBy='komalashfaque' or dental_image_score.createdBy is null)");
+        } else {
+            $this->db->where(" dental_image_score.createdBy!='komalashfaque' ");
+        }*/
+
         $this->db->group_by('dental.cluster_no, dental.hhno, dental_image_score.cluster, dental_image_score.createdBy');
         $this->db->order_by('cluster_no', 'desc');
         $query = $this->db->get();
